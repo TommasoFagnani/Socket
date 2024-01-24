@@ -3,7 +3,7 @@ import json
 from threading import Thread
 
 SERVER_ADDRESS = "127.0.0.1"
-SERVER_PORT = 22224
+SERVER_PORT = 22007
 BUFFER_SIZE = 1024
 
 
@@ -39,7 +39,7 @@ def ricevi_comandi(sock_service, addr_client):
     print("connessione con :", addr_client," chiusa")
 
 def ricevi_connessioni(sock_listen):
-     print("server in attesa di connessione")
+     print("server in ascolto su: ",(SERVER_ADDRESS,SERVER_PORT))
      while True:
           sock_service,address_client = sock_listen.accept()
           print("connessione ricevuta da: ",address_client)
@@ -65,7 +65,7 @@ def avvio_server(indirizzo,porta):
 
 if __name__ == '__main__':
     avvio_server(SERVER_ADDRESS, SERVER_PORT)
-print("Termina")
+
                 
 
         
