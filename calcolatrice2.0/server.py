@@ -2,7 +2,7 @@ import socket
 import json
 
 SERVER_IP = "127.0.0.1"
-SERVER_PORT = 5005
+SERVER_PORT = 22007
 BUFFER_SIZE = 1024
 
 
