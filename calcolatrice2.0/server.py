@@ -12,6 +12,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock_server:
     sock_server.bind((SERVER_IP,SERVER_PORT))
     sock_server.listen()
     print(f"Server in ascolto su {SERVER_IP}:{SERVER_PORT}...")
+    
     while True:
         sock_service, address_client = sock_server.accept()
         
